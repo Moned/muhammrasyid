@@ -1,0 +1,54 @@
+agenda
+======
+
+Aplikasi berbasiskan framework Laravel yang dibuat sesuai dengan keperluan administrasi surat masuk-surat keluar pada Seksi di KPP. Akan tetapi, dengan sedikit atau beberapa penyesuaian baik dari segi penggunaan ataupun modifikasi kode aplikasi ini sendiri, bukan tidak mungkin dapat digunakan di instansi lain.
+
++++ Screenshot Aplikasi sebagai gambaran:
+https://dl.dropboxusercontent.com/u/26615548/work/AgendaSurat_Screenshot_2015.08.rar
+
+CARA INSTALL
+=====================
+Cara install beserta konfigurasinya dapat dilihat di video tutorial berikut (88MB):
+https://dl.dropboxusercontent.com/u/26615548/work/cara-install-apps-agenda-surat.wmv
+
+CARA UPDATE
+=====================
+Cara update paket aplikasinya, berikut video tutorialnya untuk mengupdate paket aplikasi
+ke yang versi terbaru (15 MB):
+https://dl.dropboxusercontent.com/u/26615548/work/cara-update-apps-agenda-surat.wmv
+
+PENTING !!!
+=====================
+>>>> #1 <<<<
+PENTING: Enable modul rewrite pada Apache, buka file httpd.conf (jika menggunakan WAMP, klik icon W pada systray -> Apache -> httpd.conf), ubah baris:
+
+#LoadModule rewrite_module modules/mod_rewrite.so
+
+uncomment dengan menghapus tanda pagar menjadi:
+
+LoadModule rewrite_module modules/mod_rewrite.so
+
+>>>> #2 <<<<
+Extension fileinfo pada PHP harus di-enable untuk dapat memanfaatkan fitur import daftar surat.
+Pada Windows:
+extension=php_fileinfo.dll
+
+atau pada GNU/Linux:
+extension=fileinfo.so
+
+TIPS !!!
+=====================
+Cara update singkat (safe):
+* Rename folder aplikasi Agenda Surat yang lama
+* Extract dan tempatkan folder aplikasi Agenda Surat yang baru ini dengan nama yang sama sebelumnya
+* Edit config database pada file: application/config/database.php
+* Jalankan migrasi di dalam folder Aplikasi Agenda surat tersebut (apabila ada update migrasi) dengan command: php artisan migrate
+
+Command "php" bisa dijalankan dari command prompt jika sudah masuk dalam Path sistem. Kalau belum, masukan pathnya manual, misal: D:\wamp\bin\php\php5.4.3\php.exe artisan migrate
+
+Semoga bermanfaat.
+
+=====================
+Laravel Framework:
+http://laravel.com/
+
